@@ -1,0 +1,24 @@
+{
+  "name": "put-value",
+  "version": "0.0.0",
+  "description": "Update only existing values from an object, works with dot notation paths like `a.b.c` and support deep nesting.",
+  "repository": "tunnckoCore/put-value",
+  "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "standard && node test.js"
+  },
+  "dependencies": {
+    "assign-deep": "~0.1.2",
+    "has-own-deep": "~0.1.4",
+    "isobject": "~1.0.0",
+    "kind-of": "~2.0.0",
+    "lazy-cache": "~0.1.0",
+    "set-value": "~0.2.0"
+  },
+  "devDependencies": {
+    "assertit": "^0.1.0"
+  },
+  "keywords": []
+}
