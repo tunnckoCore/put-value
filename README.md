@@ -9,9 +9,9 @@
 - updates value of `key` only if `key` exists
 - updates only existing values of `obj` when object is given to `key`
 - because `set-value` **update** values if exist and **add** if not exist
+- returns original object if `key` is not an object or string
 - returns empty object if `obj` is not an object
 - returns modified object otherwise
-- returns original object if `key` is not an object or string
 
 
 ## Install
@@ -26,6 +26,49 @@ npm test
 
 ```js
 var put = require('put-value')
+var obj = {
+  a: {
+    foo: 'bar'
+  },
+  b: {
+    bb: 'bbb'
+  }
+}
+
+put(123) //=> empty object {}
+put(obj, {a: {bar: 'baz'}}) //=> original `obj`
+put(obj, {a: 'foo'}})
+//=> {
+//   a: 'foo',
+//   b: {
+//     bb: 'bbb'
+//   }
+// }
+
+put(obj, {zzz: 'xxx'}) //=> original `obj`
+put(obj, 'foo', 'baz') //=> original `obj`
+put(obj, 'foo.bar', 'baz') //=> original `obj`
+put(obj, 'a', {foo: 123})
+//=> {
+//   a: {
+//     foo: 123
+//   },
+//   b: {
+//     bb: 'bbb'
+//   }
+// }
+
+put(obj, 'a.foo', {baz: 'aaa'})
+//=> {
+//   a: {
+//     foo: {
+//       baz: 'aaa'
+//     }
+//   },
+//   b: {
+//     bb: 'bbb'
+//   }
+// }
 ```
 
 
