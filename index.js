@@ -23,8 +23,7 @@ module.exports = function putValue (obj, key, value) {
     return obj
   }
   if (type === 'object') {
-    obj = assign()(obj, key)
-    return obj
+    return assign()(obj, key)
   }
   if (key.indexOf('.') === -1) {
     if (obj.hasOwnProperty(key)) {
@@ -33,7 +32,7 @@ module.exports = function putValue (obj, key, value) {
     return obj
   }
   if (hasOwn()(obj, key)) {
-    set()(obj, key)
+    set()(obj, key, value)
   }
   return obj
 }
