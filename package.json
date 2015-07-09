@@ -20,5 +20,14 @@
   "devDependencies": {
     "assertit": "^0.1.0"
   },
-  "keywords": []
+  "keywords": [
+    "dot",
+    "notation",
+    "object",
+    "path",
+    "props",
+    "update",
+    "val",
+    "values"
+  ]
 }
