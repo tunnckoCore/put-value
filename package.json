@@ -10,7 +10,7 @@
     "test": "standard && node test.js"
   },
   "dependencies": {
-    "assign-deep": "~0.1.2",
+    "assign-deep": "~1.0.1",
     "has-own-deep": "~0.1.4",
     "isobject": "~1.0.0",
     "kind-of": "~2.0.0",
