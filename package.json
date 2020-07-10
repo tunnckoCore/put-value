@@ -15,7 +15,7 @@
     "isobject": "~1.0.0",
     "kind-of": "~2.0.0",
     "lazy-cache": "~0.1.0",
-    "set-value": "~0.2.0"
+    "set-value": "~3.0.2"
   },
   "devDependencies": {
     "assertit": "^0.1.0"
